@@ -1,4 +1,4 @@
-# Декоратор с аргументами:
+# Простой декоратор:
 def my_decorator(func):
     def wrapper():
         print("Дополнительный код до вызова функции")
@@ -13,7 +13,7 @@ def say_hello():
 say_hello()
 
 
-#Декораторы классов:
+#Декоратор с аргументами:
 def repeat(num_times):
     def decorator_repeat(func):
         def wrapper(*args, **kwargs):
