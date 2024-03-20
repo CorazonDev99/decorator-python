@@ -1,4 +1,7 @@
-# Простой декоратор:
+# Dekorator - bu Pythondagi dizayn namunasi bo'lib,
+# u foydalanuvchiga uning tuzilishini o'zgartirmasdan mavjud ob'ektga yangi funksiyalar qo'shish imkonini beradi.
+
+# Oddiy dekoratorlar:
 def my_decorator(func):
     def wrapper():
         print("Дополнительный код до вызова функции")
@@ -13,7 +16,7 @@ def say_hello():
 say_hello()
 
 
-#Декоратор с аргументами:
+#Argumentli dekoratorlar:
 def repeat(num_times):
     def decorator_repeat(func):
         def wrapper(*args, **kwargs):
@@ -32,7 +35,7 @@ greet("Миша")
 
 
 
-# Декораторы классов:
+# Class dekoratorlar:
 def debug(func):
     def wrapper(*args, **kwargs):
         print(f"Вызвана функция {func.__name__}")
