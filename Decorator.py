@@ -4,14 +4,14 @@
 # Oddiy dekoratorlar:
 def my_decorator(func):
     def wrapper():
-        print("Дополнительный код до вызова функции")
+        print("Funktsiya chaqiruvidan oldin qo'shimcha kod")
         func()
-        print("Дополнительный код после вызова функции")
+        print("Funktsiya chaqiruvidan keyin qo'shimcha kod")
     return wrapper
 
 @my_decorator
 def say_hello():
-    print("Привет!")
+    print("Hello!")
 
 say_hello()
 
@@ -28,17 +28,15 @@ def repeat(num_times):
 
 @repeat(num_times=3)
 def greet(name):
-    print(f"Привет, {name}!")
+    print(f"Hello {name}!")
 
-greet("Миша")
-
-
+greet("World")
 
 
 # Class dekoratorlar:
 def debug(func):
     def wrapper(*args, **kwargs):
-        print(f"Вызвана функция {func.__name__}")
+        print(f"Funksiya {func.__name__}ni chaqirish")
         return func(*args, **kwargs)
     return wrapper
 
@@ -64,7 +62,7 @@ class Circle:
     @radius.setter
     def radius(self, value):
         if value < 0:
-            raise ValueError("Радиус не может быть отрицательным")
+            raise ValueError("Radius manfiy bo'lishi mumkin emas")
         self._radius = value
 
 
